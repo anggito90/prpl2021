@@ -11,7 +11,14 @@ class SignUp
      */
     function sendEmail()
     {
-        //Your code is here
+        $to = $email
+        $subject = 'Your account has been created';
+        $message = 'Hi $username 
+        Your account has been succesfully created
+        Please enjoy
+        Sweng-academy team';
+        $headers = 'From:noreply@sweng-academy.com';
+        mail($to, $subject, $message, $headers);
     }
 
     function inputValidation($email, $password)
